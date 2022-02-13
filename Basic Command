@@ -1,0 +1,13 @@
+from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
+import time
+
+driver = webdriver.Chrome(executable_path="C:\Driver\chromedriver\chromedriver.exe")
+driver.get("http://103.149.143.53/#/sign-in")
+print(driver.title)
+print(driver.current_url)
+
+driver.find_element_by_xpath("//span[contains(text(),'Sign in')]").click()
+driver.time(5)
+
+driver.close()
